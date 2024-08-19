@@ -1,13 +1,13 @@
 <?php
 
-function send_remote_data_mail(array $emailList, string $from): array
+function send_remote_data_mail(array $email_list, string $from): array
 {
     mb_language("uni");
     mb_internal_encoding("UTF-8");
 
     $results = [];
 
-    foreach ($emailList as $email) {
+    foreach ($email_list as $email) {
         if (!isset($email['to'], $email['subject'], $email['body'])) {
             $results[] = "Error: Missing required fields in email data.";
             continue;
