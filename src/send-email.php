@@ -1,6 +1,6 @@
 <?php
 
-function send_remote_data_mail(array $email_list, string $from): array
+function send_email(array $email_list, string $from): array
 {
     mb_language("uni");
     mb_internal_encoding("UTF-8");

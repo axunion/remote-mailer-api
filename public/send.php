@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../src/send_remote_data_mail.php.php';
+require __DIR__ . '/../src/send-email.php.php';
 
 header('Content-Type: application/json');
 
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $email_list = $input_data['from'] ?? [];
         $from = $input_data['from'] ?? '';
-        $results = send_remote_data_mail($emailList, $from);
+        $results = send_email($emailList, $from);
 
         echo json_encode([
             'status' => 'success',
