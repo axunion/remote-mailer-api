@@ -1,11 +1,10 @@
 <?php
 
-require __DIR__ . '/../src/send-email.php.php';
-
-header('Content-Type: application/json');
-
+require __DIR__ . '/../src/send_email.php.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    header('Content-Type: application/json');
+
     try {
         $post_data = file_get_contents('php://input');
 
